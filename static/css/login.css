@@ -1,0 +1,85 @@
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+      background: #ccc;
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+  }
+  #formContent {
+      border-radius: 10px;
+      background: #fff;
+      padding: 30px;
+      width: 90%;
+      max-width: 450px;
+      position: relative;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+  .form-group {
+      padding: 10px 10px 0px 0px;
+  }
+  .form-group label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #303030;    
+  }
+  .input-group {
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      border-radius: 6px;
+  }
+  .input-group span {
+      width: 9%;
+      background: #e9f0ee;
+      padding: 6px 0px 0 10px;
+  }
+  .input-group .input{
+      border: 0;
+      padding: 5px;
+      width: 80%;
+  }
+  .input-group .input:focus{
+      outline: none;
+  }
+  .input-group #sh {
+      display: none;
+  }
+  .input-group #show {
+      width: 6%;
+      padding: 6px 0px 0 10px;
+      font-size: 19px;
+  }
+  #sh:checked ~ #show {
+      display: none;
+  }
+  .input-group #hide {
+      width: 6%;
+      padding: 6px 0px 0 10px;
+      font-size: 19px;
+  }
+  .form-group .btn {
+      margin-top: 10px;
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  }
+  #formFooter {
+      margin: 30px -30px -30px -30px;
+      background-color: #f6f6f6;
+      border-top: 1px solid #dce8f1;
+      padding: 25px;
+      text-align: center;
+      -webkit-border-radius: 0 0 10px 10px;
+      border-radius: 0 0 10px 10px;
+  }
+  #formFooter a {
+    color: #92badd;
+    display:inline-block;
+    text-decoration: none;
+    font-weight: 400;
+  }

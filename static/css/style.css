@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.sidebar {
+    height: 100%;
+    width: 78px;
+    background: #313a46;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.sidebar.active {
+    width: 240px;
+}
+.sidebar .logo_content .logo {
+    color: ghostwhite;
+    display: flex;
+    width: 50px;
+    height: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    padding: 10px;
+}
+.sidebar.active .logo_content .logo {
+    opacity: 1;
+    pointer-events: auto;
+}
+.logo_content .logo i {
+    font-size: 28px;
+    margin-right: 5px;
+}
+.logo_content .logo .logo_name {
+    font-size: 20px;
+    font-weight: 400;
+    color: aliceblue;
+    text-decoration: none;
+}
+.sidebar #open {
+    color: #eef2f7;
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+.sidebar #close {
+    color: #eef2f7;
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    display: none;
+}
+.sidebar.active #open {
+    display: none;
+}
+.sidebar.active #close {
+    display: inline;
+    left: 90%;
+}
+.sidebar .profile {
+    position: relative;
+    padding: 10px 6px;
+    height: 70px;
+}
+.profile .profile_details {
+    display: flex;
+    align-items: center;
+}
+.profile .profile_details img{
+    align-items: center; 
+    height: 45px;
+    border-radius: 35px 35px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.profile .profile_details .name {
+    color: white;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .name{
+    opacity: 1;
+    pointer-events: auto;  
+    transition: all 0.5s ease;  
+}
+.profile #logout {
+    position: absolute;
+    left: 88%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 12px;
+}
+.sidebar ul {
+    margin-top: 20px;
+}
+.sidebar ul li {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    list-style: none;
+    line-height: 50px;
+}
+.sidebar ul li a {
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    font-size: 24px;
+}
+.sidebar ul li a:hover {
+    color: #11101d;
+    background: #86a4b6;
+    border-radius: 2px;
+}
+.sidebar ul li i {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+.sidebar .links_name {
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.active .links_name {
+    font-size: 16px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.dashboard {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
+    background: #f8faff;
+}
+.sidebar.active ~ .dashboard {
+    width: calc(100% - 240px);
+    left: 240px;
+}
+.top {
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+}
+.top .title_page {
+    font-size: 24px;
+    font-weight: 500;
+    color: black;
+}
+.top .rightside {
+    width: 100%;
+    left: 85%;
+    position: fixed;
+    top: 0;
+    padding: 20px;
+}
+.rightside i {
+    width: 50px;
+    font-size: 25px;
+    align-items: center;
+}
+.rightside a {
+    text-decoration: none;
+    color: #333;
+}
+.rightside a:hover {
+    text-decoration: none;
+    color: #333;
+}
+.content {
+    padding: 20px;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    text-align: right;
+    width: 100%;
+    height: 50px;
+}
